@@ -68,6 +68,24 @@ def Buscar(self,nombre, actual=None):
              return False
         #llamada recursiva
         return self.Buscar(nombre,actual.siguiente)
-
+def eliminar(self, nombre):
+        if self.vacia():
+            print("Lista vacia")
+            return
+        actual=self.cabeza
+        while actual is not None:
+            if actual.nombre==nombre:
+                if actual.anterior is not None:
+                    actual.anterior.siguiente=actual.siguiente
+                else:
+                    self.cabeza=actual.siguiente
+                if actual.siguiente is not None:
+                    actual.siguiente.anterior=actual.anterior
+                else:
+                    self.cola=actual.anterior
+                print("Cancion eliminada", str(actual.nombre))
+                return
+            actual=actual.siguiente
+        print("Cancion no encontrada")
         
 
