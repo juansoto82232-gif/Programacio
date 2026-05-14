@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos JavaScript</title>
+</head>
+
+<body style="background-color: blueviolet;">
+    <center>
+        <h2>Ejemplos Con JavaScript</h2>
+    </center>
+    <button>Cambiar Texto</button>
+    <!--Cambiar la imagen la hacer click sobre la imagen-->
+    <div m-4>
+        <img src="/Semiotica-HTML/Imagenes/Bahamas.jpg" alt="">
+    </div>
+
+
+    <div>
+        <form action="get">
+            Usuario:
+            <input name="usuario" id="usuario" maxlength="15" required>
+            Email:
+            <input type="email" name="email" id="email" required>
+            Rango de Edad:
+            <input type="range" name="edad" id="edad" min="0" max="99" step="20" value="20">
+            <output id="range"> 0 a 20 </output>
+            <input type="button" id="enviar" value="ingresar">
+
+        </form>
+    </div>
+    <!--Funcion para que el boton funcione-->
+    <script>
+        // Actualiza el valor visible del rango cuando se mueve el slider
+        function actualizarRango(valor) {
+            document.getElementById('range').textContent = valor;
+        }
+        // Agrega evento click al botón "ingresar"
+        document.getElementById('enviar').addEventListener('click', function () {
+            // Obtener valores de los inputs
+            const usuario = document.getElementById('usuario').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const edad = document.getElementById('edad').value;
+            // Validar que los campos requeridos no estén vacíos
+            if (!usuario) {
+                alert('Por favor, ingresa el nombre de usuario.');
+                return;
+            }
+            if (!email) {
+                alert('Por favor, ingresa un email válido.');
+                return;
+            }
+            // Mostrar los datos ingresados (puedes cambiar esta parte para enviar datos o procesarlos)
+            alert(`Usuario: ${usuario}\nEmail: ${email}\nEdad: ${edad}`);
+        });
+    </script>
+
+    <!--Se integra el archivo de JavaScript-->
+    <script src="index.js"></script>
+</body>
+
+</html>

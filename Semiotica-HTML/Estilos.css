@@ -1,0 +1,157 @@
+ *{background-color:blueviolet} 
+ #nave ul
+ {
+    list-style: none;/*Para quitar las viñetas*/
+    padding:0;/*Para quitar el espacio entre el borde y el texto*/
+    margin:0;/*Para quitar el espacio entre el borde y el texto*/
+    display: flex;/*Para colocarlos en la misma linea*/
+    justify-content: center;/*Para centrar los elementos*/
+}
+#nave li
+{
+    margin: 0 15px;/*Espacio entre los elementos*/
+}
+        
+#nave li a
+{
+    text-decoration: none;/*Para quitar el subrayado*/
+    color: red(176, 14, 76);/*Para cambiar el color del texto*/
+    padding: 10px 15px;/*Para agregar espacio entre el texto y el borde*/
+    background-color: rosybrown;/*Para cambiar el color de fondo*/
+    border-radius: 5px;/*Para redondear los bordes*/
+}
+#nave li a:hover
+{
+    background-color: aquamarine;/*Para cambiar el color de fondo al pasar el mouse*/
+    color: white;/*Para cambiar el color del texto al pasar el mouse*/
+}
+h4{
+    color: aqua;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#imagenes
+{
+    background-color: aliceblue;
+    margin: 20px;
+}
+img
+{
+    padding: 10px;
+    border-radius: 20px;
+    width: 40%;
+    display: block;/*Para centrar la imagen*/
+    margin-left: auto;
+    margin-right: auto;
+}
+#Somos
+{
+    background-color: cadetblue;
+    padding: 10px;
+    font-size: medium;
+}
+/*Div de sitios turisticos*/
+.contenedor
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;/*Diseño responsive*/
+}
+.tarjeta
+{
+    padding: 20px;
+    padding-bottom: 20px;
+    width: 400px;
+    background:#f9f9f9 ;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;/*Consultarlo*/
+    text-align: center;
+    transition: 0.3s;/*Para dar movimiento*/
+}
+.tarjeta:hover
+{
+    transform: translateY(-5px);
+}
+.tarjeta img
+{
+    width: 70px;
+    height: 100px;
+    object-fit: cover;/*Consultar*/
+}
+.contenido
+{
+    margin: 10px;
+    padding: 15px;
+    padding-bottom: 15px;
+}
+/*footer*/
+.pp
+{
+    background-color: black;
+    padding: 20px 0;
+    margin: 3rem;
+    display: flex;/*Para colocar los elementos en la misma linea*/
+    text-align: center;
+    justify-content: space-between;/*Para separar los elementos*/
+    align-items: center;/*Para centrar los elementos verticalmente*/
+    width: 100%;
+}
+.pp-content
+{
+    flex-direction: column;/*Para colocar los elementos en columna*/
+    align-items: center;/*Para centrar los elementos verticalmente*/
+    gap: 15px;/*Para agregar espacio entre los elementos*/
+}
+.social
+{
+    display: flex;/*Para colocar los elementos en la misma linea*/
+    gap: 15px;/*Para agregar espacio entre los elementos*/
+    padding-right: 50px;
+}
+/*Carrusel*/
+.carousel {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    }
+
+    .slides img {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+    .slides img.active {
+    display: block;
+    }
+
+    button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+    }
+
+    button.prev {
+    left: 10px;
+    }
+
+    button.next {
+    right: 10px;
+    }
+.collapse {
+    display: none;
+}
